@@ -1,5 +1,23 @@
 # vscode-extension-starter README
 
+<p align="left">
+  <a aria-label="Build" href="https://github.com/hyperse-io/vscode-extension-starter/actions?query=workflow%3ACI">
+    <img alt="build" src="https://img.shields.io/github/actions/workflow/status/hyperse-io/vscode-extension-starter/ci-integrity.yml?branch=main&label=ci&logo=github&style=flat-quare&labelColor=000000" />
+  </a>
+  <a aria-label="stable version" href="https://www.npmjs.com/package/@hyperse/vscode-extension-starter">
+    <img alt="stable version" src="https://img.shields.io/npm/v/%40hyperse%2Fvscode-extension-starter?branch=main&label=version&logo=npm&style=flat-quare&labelColor=000000" />
+  </a>
+  <a>
+    <img alt="LoC" src="https://img.shields.io/bundlephobia/min/%40hyperse%2Fvscode-extension-starter?style=flat-quare&labelColor=000000" />
+  </a>
+  <a aria-label="Top language" href="https://github.com/hyperse-io/vscode-extension-starter/search?l=typescript">
+    <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/hyperse-io/vscode-extension-starter?style=flat-square&labelColor=000&color=blue">
+  </a>
+  <a aria-label="Licence" href="https://github.com/hyperse-io/vscode-extension-starter/blob/main/LICENSE">
+    <img alt="Licence" src="https://img.shields.io/github/license/hyperse-io/vscode-extension-starter?style=flat-quare&labelColor=000000" />
+  </a>
+</p>
+
 This is the README for your extension "vscode-hyperse". After writing up a brief description, we recommend including the following sections.
 
 ## Features

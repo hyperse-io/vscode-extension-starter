@@ -1,0 +1,24 @@
+{
+	"extends": "@hyperse/eslint-config-hyperse/tsconfig.base.json",
+	"compilerOptions": {
+		"baseUrl": "./",
+		"rootDir": "./",
+		"outDir": "./dist",
+		"jsx": "preserve",
+		"noImplicitAny": false,
+		"noEmit": false,
+		"incremental": true,
+		"module": "ESNext",
+		"moduleResolution": "node",
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+	},
+	"exclude": [
+		"node_modules",
+		".vscode-test",
+		"**/.*/",
+		"dist",
+		"build",
+		"public"
+	]
+}

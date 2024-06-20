@@ -1,0 +1,80 @@
+{
+  "name": "@hyperse/vscode-extension-starter",
+  "displayName": "vscode-extension-starter",
+  "version": "0.0.1",
+  "description": "",
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/extension.js",
+  "scripts": {
+    "vscode:prepublish": "yarn run package",
+    "build": "yarn run check-types && node esbuild.mjs",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.mjs --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "yarn run check-types && yarn run lint && node esbuild.mjs --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
+    "test": "vitest run",
+    "vscode:test": "vscode-test",
+    "typecheck": "tsc --project ./tsconfig.json --noEmit",
+    "lint-staged-files": "lint-staged --allow-empty",
+    "check-types": "tsc --noEmit",
+    "changeset": "changeset",
+    "release": "yarn build && changeset publish",
+    "lint": "eslint .",
+    "test-task": "vitest run",
+    "lint-fix": "yarn lint --fix",
+    "cz": "cz",
+    "prepare": "husky"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.add",
+        "title": "DI: Add"
+      },
+      {
+        "command": "extension.remove",
+        "title": "DI: Remove"
+      }
+    ]
+  },
+  "activationEvents": [],
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "inversify": "^6.0.2",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "0.5.0",
+    "@changesets/cli": "2.27.5",
+    "@commitlint/cli": "19.3.0",
+    "@commitlint/config-conventional": "19.2.2",
+    "@flatjs/evolve": "^2.1.0-next.19",
+    "@hyperse/eslint-config-hyperse": "1.0.8",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.90.0",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0",
+    "commitizen": "4.3.0",
+    "cz-conventional-changelog": "3.3.0",
+    "esbuild": "^0.21.5",
+    "eslint": "^9.x",
+    "husky": "9.0.11",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  },
+  "engines": {
+    "vscode": "^1.91.0"
+  },
+  "packageManager": "yarn@4.3.0"
+}

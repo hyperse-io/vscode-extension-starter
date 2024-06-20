@@ -6,6 +6,13 @@
   "categories": [
     "Other"
   ],
+  "keywords": [
+    "hyperse",
+    "typescript",
+    "vscode",
+    "vscode extension",
+    "inversify"
+  ],
   "main": "./dist/extension.js",
   "scripts": {
     "vscode:prepublish": "yarn run package",

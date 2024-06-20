@@ -57,7 +57,7 @@ jobs:
 
       - name: Build
         run: |
-          yarn build
+          yarn compile
 
       - name: Unit tests
         run: |

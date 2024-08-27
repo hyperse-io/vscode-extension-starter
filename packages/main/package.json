@@ -1,0 +1,85 @@
+{
+  "name": "main",
+  "displayName": "main",
+  "version": "0.0.1",
+  "description": "",
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "hyperse",
+    "typescript",
+    "vscode",
+    "vscode extension",
+    "inversify"
+  ],
+  "main": "./dist/extension.js",
+  "scripts": {
+    "compile": "yarn run check-types && node esbuild.mjs",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.mjs --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "build": "yarn run package",
+    "package": "yarn run check-types && yarn run lint && node esbuild.mjs --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
+    "test": "vitest run",
+    "vscode:test": "vscode-test",
+    "typecheck": "tsc --project ./tsconfig.json --noEmit",
+    "lint-staged-files": "lint-staged --allow-empty",
+    "check-types": "tsc --noEmit",
+    "changeset": "changeset",
+    "release": "yarn build && changeset publish",
+    "lint": "eslint .",
+    "test-task": "vitest run",
+    "lint-fix": "yarn lint --fix",
+    "cz": "cz",
+    "prepare": "husky"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.add",
+        "title": "DI: Add"
+      },
+      {
+        "command": "extension.remove",
+        "title": "DI: Remove"
+      },
+      {
+        "command": "extension.webview",
+        "title": "DI: webview"
+      }
+    ]
+  },
+  "activationEvents": [],
+  "dependencies": {
+    "inversify": "^6.0.2",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "@flatjs/evolve": "^2.1.1",
+    "@hyperse/eslint-config-hyperse": "1.1.3",
+    "@hyperse/hyper-env": "^1.0.13",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.92.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "esbuild": "^0.23.1",
+    "eslint": "^9.x",
+    "husky": "9.1.5",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.5.4",
+    "vite-tsconfig-paths": "^5.0.1",
+    "vitest": "^2.0.5"
+  },
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "packageManager": "yarn@4.3.0",
+  "vsce": {
+    "dependencies": false,
+    "yarn": false
+  }
+}

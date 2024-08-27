@@ -1,5 +1,5 @@
 {
-	"extends": "@hyperse/eslint-config-hyperse/tsconfig.base.json",
+	"extends": "./tsconfig.base.json",
 	"compilerOptions": {
 		"baseUrl": "./",
 		"rootDir": "./",

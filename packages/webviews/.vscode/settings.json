@@ -1,0 +1,13 @@
+{
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "[jsonc]": {
+    "editor.formatOnSave": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[json]": {
+    "editor.formatOnSave": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  }
+}

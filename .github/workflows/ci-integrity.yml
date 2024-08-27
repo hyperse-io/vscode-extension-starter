@@ -53,12 +53,16 @@ jobs:
 
       - name: Linter
         run: |
-          yarn lint
+          yarn g:lint
 
+      - name: Typecheck
+        run: |
+          yarn g:typecheck
+  
       - name: Build
         run: |
-          yarn compile
+          yarn g:build
 
       - name: Unit tests
         run: |
-          yarn test
+          yarn g:test

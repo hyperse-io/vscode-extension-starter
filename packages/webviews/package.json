@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "clean": "rimraf --no-glob ./dist ./coverage ./tsconfig.tsbuildinfo",
-    "lint": "eslint . --cache --cache-location .cache/eslint/main.eslintcache",
+    "lint": "eslint .",
     "test": "run-s test-unit",
     "test-unit": "vitest run --passWithNoTests",
     "test-unit-watch": "vitest watch --ui",
@@ -24,8 +24,7 @@
     "ci:checkRequirements": "npx flat ci checkRequirements",
     "build": "npx flat build evolve",
     "serve": "npx flat serve evolve",
-    "parallel": "npx flat ci parallel --prefix abc",
-    "postinstall": "is-ci || yarn husky"
+    "prepare": "yarn husky"
   },
   "dependencies": {
     "@dimjs/lang": "next",

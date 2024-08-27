@@ -6,17 +6,17 @@ import {
 import { createLaunchEditorMiddleware } from '@flatjs/evolve-launch-editor';
 const getHeadBeforeScripts = (serveMode: boolean) => {
   return [
-    'https://file.40017.cn/tcsk/react/dayjs@1.11.11/dayjs.min.js',
+    'https://unpkg.com/dayjs@1.11.11/dayjs.min.js',
     ...(serveMode
       ? [
-          'https://file.40017.cn/tcsk/react/react@18.2.0/react.development.js',
-          'https://file.40017.cn/tcsk/react/react-dom@18.2.0/react-dom.development.js',
-          'https://file.40017.cn/tcsk/react/antd@5.17.0/antd.js',
+          'https://unpkg.com/react@18.2.0/umd/react.development.js',
+          'https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js',
+          'https://unpkg.com/antd@5.17.0/dist/antd.js',
         ]
       : [
-          'https://file.40017.cn/tcsk/react/react@18.2.0/react.production.min.js',
-          'https://file.40017.cn/tcsk/react/react-dom@18.2.0/react-dom.production.min.js',
-          'https://file.40017.cn/tcsk/react/antd@5.17.0/antd.min.js',
+          'https://unpkg.com/react@18.2.0/umd/react.production.min.js',
+          'https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js',
+          'https://unpkg.com/antd@5.17.0/dist/antd.min.js',
         ]),
   ];
 };
